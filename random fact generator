@@ -1,0 +1,23 @@
+/ Mixed Messages Project
+
+// Setting arrays for the 2 separate parts of the fact
+const messageArr1 = ["Distance around the Earth","Wedding Anniversaries","Trypophobia is...","Baby rabbits are called...","Google images was literally created because...","Queen Elizabeth II is","a word for someone giving an opinion on something they know nothing about" ];
+const messageArr2 = ["24,901 miles", "1 Year: Paper, 10 Years Tin, 25 Years: Silver, 50 Years: Gold, 60 Years:Diamond","the fear of closely-packed holes","Kits","Jennifer Lopez wore that infamous dress at the 2000 Grammys","a trained mechanic","An 'ultracrepidarian'"];
+
+
+// Creating a function to generate a random number that will determine which element of each array is used in the fact
+const randomNum = array => {
+	let randomNum = Math.floor(Math.random() * array.length);
+	return randomNum;
+};
+
+// Creating the full fact with a function
+const fullfact = () => {
+	let factPt1 = messageArr1[randomNum(messageArr1)];
+	let factPt2 = messageArr2[randomNum(messageArr2)];
+	
+	return `${factPt1}? ${factPt2}
+};
+
+// Logging the function to the console
+console.log(fullfact());
